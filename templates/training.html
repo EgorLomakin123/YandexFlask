@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block training %}
+    {% if prof == "sinse" %}
+        <div>
+            <h1>Научные симуляторы</h1>
+            <img src = "{{ url_for('static', filename='source/ing.png') }}"></img>
+        </div>
+    {% endif %}
+    {% if prof == "ing" %}
+        <div>
+            <h1>Инженерные что то там</h1>
+            <img src = "{{ url_for('static', filename='source/sinse.png') }}"></img>
+        </div>
+    {% endif %}
+{% endblock %}

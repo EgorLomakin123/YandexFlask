@@ -10,5 +10,16 @@ def index(title):
     return answer
 
 
+@app.route("/training/<prof>")
+def training(prof):
+    pr = 0
+    if "инженер" in prof.lower():
+        pr = "ing"
+    elif "строитель" in prof.lower():
+        pr = "sinse"
+    answer = render_template('training.html', title="training", prof=pr)
+    return answer
+
+
 if __name__ == "__main__":
     app.run(port=8080, host='127.0.0.1')
